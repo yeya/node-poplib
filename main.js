@@ -197,7 +197,7 @@ function POP3Client(port, host, options) {
 	// Event handlers follow
 	function onData(data) {
 
-		data = data.toString("ascii");
+		data = data.toString("utf8");
 		bufferedData += data;
 
 		if (debug) console.log("Server: " + util.inspect(data));
